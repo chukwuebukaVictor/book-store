@@ -10,7 +10,7 @@ const Navbar = () => (
     <h1 style={HeaderStyle}>Bookstore</h1>
     <ul className="nav_links">
       <Link to="/"><li>Books</li></Link>
-      <Link to="/Catagories"><li>Catagories</li></Link>
+      <Link to="/Categories"><li>Categories</li></Link>
     </ul>
   </nav>
 );
