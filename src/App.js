@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Books from './components/Books';
-import Catagories from './components/Categories';
+import Categories from './components/Categories';
 import Navbar from './components/Navbar';
 import './App.css';
 
@@ -12,7 +12,7 @@ const App = () => (
       <Routes>
         <Route exact path="/" element={<Books />} />
         <Route path="bookstore" element={<Books />} />
-        <Route path="/Catagories" element={<Catagories />} />
+        <Route path="/Categories" element={<Categories />} />
       </Routes>
     </Router>
   </div>
