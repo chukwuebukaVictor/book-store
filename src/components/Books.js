@@ -2,13 +2,13 @@ import React from 'react';
 import Book from './Book';
 import AddBook from './AddBook';
 
-const BookToBeDesplayed = {
+const BookToBeDisplayed = {
   title: 'Book1',
   author: 'Author1',
 };
 
 const Books = () => {
-  const { title, author } = BookToBeDesplayed;
+  const { title, author } = BookToBeDisplayed;
   return (
     <div className="books_container">
       <Book title={title} author={author} />
