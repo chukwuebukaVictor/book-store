@@ -1,6 +1,6 @@
+const ADD_BOOK = 'book-store/books/ADD_BOOK'
+const REMOVE_BOOK = 'book-store/books/REMOVE_BOOK'
 const initialBookState = [];
-const ADD_BOOK = 'ADD_BOOK'
-const REMOVE_BOOK = 'REMOVE_BOOK'
 
 
 function addBook(book) {

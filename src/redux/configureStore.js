@@ -1,13 +1,14 @@
-import {createStore, applyMiddleware} from 'redux'
-import {combineReducers} from 'redux'
-import bookReducer from './books/bookReducer'
-import checkStatusReducer from './categories/checkStatusReducer'
+import {createStore, combineReducers} from 'redux'
+import bookReducer from './books/books'
+import checkStatusReducer from './categories/categories'
 
 const rootReducer = combineReducers({
   book: bookReducer,
 	status: checkStatusReducer
 })
 
-const store = createStore(rootReducer(applyMiddleware()))
+const bookStore = createStore(rootReducer)
 
-export default store;
+
+
+export default bookStore;
