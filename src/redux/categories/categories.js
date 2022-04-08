@@ -1,19 +1,19 @@
-const initialStatusState = [];
-const CHECK_STATUS = 'CHECK_STATUS'
+const CHECK_STATUS = 'book-store/categories/CHECK_STATUS';
+const initialState = [];
 
-
-function checkStatus() {
-	return {
-		type: CHECK_STATUS,
-	}
+export function checkStatus(id) {
+  return {
+    type: CHECK_STATUS,
+    payload: id,
+  };
 }
 
-const checkStatusReducer = (state=initialStatusState, action)=>{
-	switch(action.type){
-		case CHECK_STATUS: return 'UNDER CONSTRUCTION';
-		
-		default: return state;
-	}
-}
+const checkStatusReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case CHECK_STATUS: return 'UNDER CONSTRUCTION';
 
-export default checkStatusReducer; 
+    default: return state;
+  }
+};
+
+export default checkStatusReducer;
