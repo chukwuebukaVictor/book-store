@@ -1,6 +1,19 @@
 const ADD_BOOK = 'book-store/books/ADD_BOOK';
 const REMOVE_BOOK = 'book-store/books/REMOVE_BOOK';
-const initialState = [];
+
+
+const initialState = [
+  {
+    id: 1,
+    title: 'Book 1',
+    author: 'Author 1',
+  },
+  {
+    id: 2,
+    title: 'Book 2',
+    author: 'Author 2',
+  },
+];
 
 export function addBook(book) {
   return {
