@@ -4,45 +4,48 @@ import { v4 as uuidv4 } from 'uuid';
 import { postBook } from '../redux/books/books';
 
 const AddBook = () => {
-  const [input, setInput] = useState({
+  const [form, setForm] = useState({
     item_id: '',
     title: '',
     author: '',
     category: 'Check',
   });
 
-  const onChangeTitle = (e) => {
-    setInput({
-      ...input,
+  const titleChange = (e) => {
+    setForm({
+      ...form,
       title: e.target.value,
     });
   };
 
-  const onChangeAuthor = (e) => {
-    setInput({
-      ...input,
+  const authorChange = (e) => {
+    setForm({
+      ...form,
       author: e.target.value,
     });
   };
+
   const dispatch = useDispatch();
+
   const submitBook = (e) => {
     e.preventDefault();
-    const submittedBook = {
-      id: uuidv4(),
-      author: input.author,
-      title: input.title,
+    const theBook = {
+      item_id: uuidv4(),
+      author: form.author,
+      title: form.title,
       category: 'Check',
     };
-    dispatch(addBook(submittedBook));
-    input.author = '';
-    input.title = '';
+    dispatch(postBook(theBook));
+    form.author = '';
+    form.title = '';
   };
+
   return (
-    <div className="add-book">
+    <div className="add_book">
       <form onSubmit={(e) => submitBook(e)}>
-        <input className="author" placeholder="Author name" value={input.author} onChange={(e) => onChangeAuthor(e)} required />
-        <input className="title" placeholder="Book title" value={input.title} onChange={(e) => onChangeTitle(e)} required />
-        <button className="add-button" type="submit">ADD BOOK</button>
+        <input className="author" placeholder="Author name" value={form.author} onChange={(e) => authorChange(e)} required />
+        <input className="title" placeholder="Book title" value={form.title} onChange={(e) => titleChange(e)} required />
+        <button className="add_button" type="submit">ADD BOOK</button>
       </form>
     </div>
   );
