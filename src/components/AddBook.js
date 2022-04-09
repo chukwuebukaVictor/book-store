@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
-import bookStore from '../redux/configureStore';
+import { v4 as uuidv4 } from 'uuid';
+import { postBook } from '../redux/books/books';
 
 const AddBook = () => {
   const [input, setInput] = useState({
+    item_id: '',
     title: '',
     author: '',
+    category: 'Check',
   });
 
   const onChangeTitle = (e) => {
@@ -26,9 +28,10 @@ const AddBook = () => {
   const submitBook = (e) => {
     e.preventDefault();
     const submittedBook = {
-      id: bookStore.getState().books.length,
+      id: uuidv4(),
       author: input.author,
       title: input.title,
+      category: 'Check',
     };
     dispatch(addBook(submittedBook));
     input.author = '';
