@@ -10,10 +10,10 @@ import AddBook from './AddBook';
 
 const Books = () => {
   // const { title, author } = BookToBeDisplayed
-  const bookState = useSelector(state => state.books)
+  const bookState = useSelector((state) => state.books);
   return (
     <div className="books_container">
-      {bookState.map(book => (
+      {bookState.map((book) => (
         <div key={book.id}>
           <Book title={book.title} author={book.author} id={book.id} />
 

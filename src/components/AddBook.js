@@ -3,38 +3,37 @@ import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
 import bookStore from '../redux/configureStore';
 
-
 const AddBook = () => {
-  const [input,setInput] = useState({
+  const [input, setInput] = useState({
     title: '',
     author: '',
   });
 
-  const onChangeTitle = e =>{
+  const onChangeTitle = (e) => {
     setInput({
       ...input,
       title: e.target.value,
-    })
-  }
+    });
+  };
 
-  const onChangeAuthor = e =>{
+  const onChangeAuthor = (e) => {
     setInput({
       ...input,
       author: e.target.value,
-    })
-  }
+    });
+  };
   const dispatch = useDispatch();
-  const submitBook = e =>{
+  const submitBook = (e) => {
     e.preventDefault();
     const submittedBook = {
-      id: bookStore.getBook().books.length,
+      id: bookStore.getState().books.length,
       author: input.author,
-      title: input.title
-    }
+      title: input.title,
+    };
     dispatch(addBook(submittedBook));
     input.author = '';
     input.title = '';
-  }
+  };
   return (
     <div className="add-book">
       <form onSubmit={(e) => submitBook(e)}>
@@ -44,7 +43,6 @@ const AddBook = () => {
       </form>
     </div>
   );
-
-}
+};
 
 export default AddBook;

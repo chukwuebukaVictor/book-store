@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import { Provider } from 'react-redux';
-
+import bookStore from './redux/configureStore';
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={bookStore}>
-    <App />
-  </Provider>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );

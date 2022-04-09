@@ -1,7 +1,6 @@
 const ADD_BOOK = 'book-store/books/ADD_BOOK';
 const REMOVE_BOOK = 'book-store/books/REMOVE_BOOK';
 
-
 const initialState = [
   {
     id: 1,
@@ -34,12 +33,19 @@ const bookReducer = (state = initialState, action) => {
     case ADD_BOOK: return [
       ...state,
       {
-        id: state.length,
+        id: state.length + 1,
         title: action.payload.title,
         author: action.payload.author,
       },
     ];
-    case REMOVE_BOOK: return state.filter((book) => book.id !== action.payload.id);
+    case REMOVE_BOOK: {
+      const newState = [...state];
+      newState.splice(action.payload - 1, 1);
+      for (let i = 0; i < newState.length; i += 1) {
+        newState[i].id = i + 1;
+      }
+      return newState;
+    }
     default: return state;
   }
 };
