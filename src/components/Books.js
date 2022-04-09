@@ -3,13 +3,9 @@ import { useSelector } from 'react-redux';
 import Book from './Book';
 import AddBook from './AddBook';
 
-// const BookToBeDisplayed = {
-//   title: 'Book1',
-//   author: 'Author1',
-// };
+
 
 const Books = () => {
-  // const { title, author } = BookToBeDisplayed
   const bookState = useSelector((state) => state.books);
   return (
     <div className="books_container">
