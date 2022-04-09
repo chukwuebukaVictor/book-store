@@ -12,7 +12,7 @@ body {
 
 .header {
   text-transform: uppercase;
-  margin: 8rem 0 0 2rem;
+  margin: 8rem 0 0 0;
   font-size: 2rem;
   color: #888;
   font-weight: bold;
