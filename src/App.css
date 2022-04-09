@@ -29,10 +29,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
 }
 
 #root {
-  padding: 3rem 5rem;
   height: max-content;
 }
 
@@ -129,10 +129,6 @@ nav {
 
 .cate {
   opacity: 0.4;
-}
-
-.beer {
-  margin-left: 5rem;
 }
 
 .user {
