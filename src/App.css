@@ -84,6 +84,7 @@ nav {
   gap: 2rem;
   padding: 3rem;
 }
+
 .add_book form {
   display: flex;
   align-items: center;
@@ -104,7 +105,5 @@ nav {
   padding: 0 1rem;
   font-size: 1.5rem;
   color: #888;
-
-  /* width: 22rem; */
   height: 3rem;
 }
