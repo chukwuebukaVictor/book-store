@@ -85,27 +85,3 @@ nav {
   padding: 3rem;
 }
 
-.add_book form {
-  display: flex;
-  align-items: center;
-  margin-left: 2rem;
-  gap: 1rem;
-}
-
-.progressCircle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.author,
-.title,
-.select {
-  font-family: 'Montserrat', sans-serif;
-  padding: 0 1rem;
-  font-size: 1.5rem;
-  color: #888;
-
-  /* width: 22rem; */
-  height: 3rem;
-}
