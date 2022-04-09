@@ -3,8 +3,6 @@ import { useSelector } from 'react-redux';
 import Book from './Book';
 import AddBook from './AddBook';
 
-
-
 const Books = () => {
   const bookState = useSelector((state) => state.books);
   return (
