@@ -22,7 +22,7 @@ This project was build following the milestones bellow:
 - HTML and CSS
 
 ## Live Demo (if available)
-[Live Demo Link]()
+[Live Demo Link](https://victor-book-store-app.netlify.app/)
 
 ## Getting Started
 
